@@ -58,7 +58,7 @@ namespace Cake.SonarResults
                 var queryResult = _Client.Execute<ProjectStatusWrapper>(request);
                 ValidateResult(queryResult);
                 ProjectStatusWrapper x = queryResult.Data;
-                return x.ProjectStatus;
+                return x.Status;
             }
             catch (Exception ex)
             {
